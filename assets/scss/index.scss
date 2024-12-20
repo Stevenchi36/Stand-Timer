@@ -1,0 +1,63 @@
+@use './reset';
+body {
+  background-color: #313131;
+  color: hsl(0, 0%, 91%);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  padding: 0.3rem;
+}
+
+button,
+input[type="submit"] {
+  padding: 0.4rem;
+  border-radius: 3px;
+
+  &.primary {
+    background-color: hsl(204, 94%, 50%);
+  }
+
+  &.secondary {
+    background-color: hsl(0, 0%, 77%);
+  }
+
+  &.danger {
+    background-color: red;
+  }
+
+  &.text {
+    color: hsl(0, 0%, 91%);
+    background-color: transparent;
+    
+    &:disabled {
+      background-color: transparent;
+      text-decoration: line-through;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  button,
+  input[type="submit"] {
+    margin: 0 0.5rem 0 0;
+  }
+}
